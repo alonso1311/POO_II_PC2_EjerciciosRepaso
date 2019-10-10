@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alonso/CLionProjects/POO_II_Second/Semana7_Ejercicios/main.cpp
+iostream
+-
+vector
+-
+set
+-
+deque
+-
+algorithm
+-
+iterator
+-
+cstdarg
+-
+

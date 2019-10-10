@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Semana7_Ejercicios.dir/main.cpp.o  -o Semana7_Ejercicios 
