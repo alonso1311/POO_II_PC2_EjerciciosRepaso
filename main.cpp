@@ -88,10 +88,26 @@ auto sumar_rango(CONTAINER1& container1, CONTAINER2& container2){
         return put_sumar_rango(container2, container1);
 }
 
-//-Ejercicio 4 --- Falta completar
+//-Ejercicio 4
 template <typename CONTAINER, typename T>
 auto delete_items(CONTAINER container, T items) {
+    auto bgin = begin(container);
+    auto last = end(container);
+    for (; bgin !=  last;) {
+        if (*bgin == items) {
+            bgin = container.erase(bgin);
+        }
+        else {
+            bgin++;
+        }
+    }
 
+    CONTAINER containerR;
+
+    for (auto i : container)
+        containerR.push_back(i);
+
+    return containerR;
 }
 
 //-Ejercicio 5
@@ -125,8 +141,9 @@ CONTAINER rotate_range(CONTAINER container, int number) {
 
 //-Ejercicio 7 --- Falta completar
 template <typename T1, typename T2>
-pair<T1, T2> unpack(T1 frst, T2 scond) {
-
+auto unpack(T1 frst, T2 scond) {
+    pair<T1, T2> pair1;
+    return pair1;
 }
 
 //-Ejercicio 9
@@ -156,6 +173,8 @@ int main() {
 
     //split_range(v,3);
     //auto v4 = sumar_rango(v, v1);
+    auto vs = delete_items(v, 2);
+    print(vs);
 
 
     vector<int> vd = {10, 20, 10, 20, 30, 40, 10};
@@ -169,7 +188,7 @@ int main() {
     cout << p1.first <<  " " << p1.second << endl;
     int key;
     string name;
-    unpack(key, name) = p1;
+    auto a = unpack(key, name); a = p1;
     cout << key <<  " " << name;*/
 
     /*auto c1 = generar_contenedor<vector<int>>(1, 2, 3, 4);
