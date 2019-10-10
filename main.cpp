@@ -2,9 +2,11 @@
 #include <vector>
 #include <set>
 #include <deque>
+#include <string>
 #include <algorithm>
 #include <iterator>
-#include<cstdarg>
+#include <cstdarg>
+#include <utility>
 
 using namespace std;
 
@@ -25,7 +27,7 @@ T absolute(T& numero){
     return (numero > 0) ? numero : (numero*-1);
 }
 
-//-Ejercicio 2
+//-Ejercicio 2 --- Falta terminar
 template <typename CONTAINER>
 auto split_range(CONTAINER container, int numero){
     int tamano = size(container);
@@ -86,7 +88,7 @@ auto sumar_rango(CONTAINER1& container1, CONTAINER2& container2){
         return put_sumar_rango(container2, container1);
 }
 
-//-Ejercicio 4
+//-Ejercicio 4 --- Falta completar
 template <typename CONTAINER, typename T>
 auto delete_items(CONTAINER container, T items) {
 
@@ -121,9 +123,32 @@ CONTAINER rotate_range(CONTAINER container, int number) {
     return containerR;
 }
 
-//-Ejercicio 7
+//-Ejercicio 7 --- Falta completar
+template <typename T1, typename T2>
+pair<T1, T2> unpack(T1 frst, T2 scond) {
 
+}
 
+//-Ejercicio 9
+template <typename CONTAINER, typename... T>
+CONTAINER generar_contenedor(T ... args) {
+    CONTAINER container;
+    for(auto& i : {args...})
+        container.push_back(i);
+
+    return container;
+}
+
+//-Ejercicio 10
+template <typename... CONTAINER>
+void min_size(CONTAINER ... container) {
+    vector<int> size_container;
+    for(auto& i : {container...}) {
+        size_container.push_back(size(i));
+    }
+    vector<int>::iterator result = min_element(size_container.begin(), size_container.end());
+    cout << *result;
+}
 
 int main() {
     vector<int> v = {1, 2, 3, 4, 5, 6};
@@ -138,9 +163,19 @@ int main() {
     //delete_duplicated(vd);
     /*auto v3 = rotate_range(vd, -2);
       print(v3);*/
-
     //print(vd);
-    vector<int> f = {1};
+
+    /*pair<int, string> p1 = {1321, "Jose Perez"};
+    cout << p1.first <<  " " << p1.second << endl;
+    int key;
+    string name;
+    unpack(key, name) = p1;
+    cout << key <<  " " << name;*/
+
+    /*auto c1 = generar_contenedor<vector<int>>(1, 2, 3, 4);
+    print(c1);*/
+    /*vector<int> v2 = {10, 20};
+    min_size(v, v1, vd, v2);*/
 
     return 0;
 }

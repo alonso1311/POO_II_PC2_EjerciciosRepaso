@@ -1,4 +1,4 @@
-# Install script for directory: /home/alonso/CLionProjects/POO_II_Second/Semana7_Ejercicios
+# Install script for directory: /home/alonso/Documentos/GitHub/POO_II_PC2_EjerciciosRepaso
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/alonso/CLionProjects/POO_II_Second/Semana7_Ejercicios/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/alonso/Documentos/GitHub/POO_II_PC2_EjerciciosRepaso/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

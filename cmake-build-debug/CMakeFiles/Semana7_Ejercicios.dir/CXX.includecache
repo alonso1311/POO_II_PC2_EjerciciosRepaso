@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/alonso/CLionProjects/POO_II_Second/Semana7_Ejercicios/main.cpp
+/home/alonso/Documentos/GitHub/POO_II_PC2_EjerciciosRepaso/main.cpp
 iostream
 -
 vector
@@ -15,10 +15,14 @@ set
 -
 deque
 -
+string
+-
 algorithm
 -
 iterator
 -
 cstdarg
+-
+utility
 -
 
